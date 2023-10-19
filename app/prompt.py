@@ -13,3 +13,41 @@ output: "{'Lumper': True, 'DriverAssist': True, 'TeamDriver': False}"
 -------
 
 '''
+MESSGAE = [
+    {
+      "role": "system",
+      "content": completion_prompt
+    },
+    {
+      "role": "user",
+      "content": "Driver Help Unload."
+    },
+    {
+      "role": "assistant",
+      "content": "{'Lumper': False, 'DriverAssist': True, 'TeamDriver': False}"
+    },
+    {
+      "role": "user",
+      "content": "PLEASE SHIP WITH 5415912095es lumper charges."
+    },
+    {
+      "role": "assistant",
+      "content": "{'Lumper': True, 'DriverAssist': False, 'TeamDriver': False}"
+    },
+    {
+      "role": "user",
+      "content": "TEAMS IF NEEDED TO DELIVER ON TIME."
+    },
+    {
+      "role": "assistant",
+      "content": "{'Lumper': False, 'DriverAssist': False, 'TeamDriver': True}"
+    },
+    {
+      "role": "user",
+      "content": "Floor load only."
+    },
+    {
+      "role": "assistant",
+      "content": "{'Lumper': False, 'DriverAssist': False, 'TeamDriver': False}"
+    }
+]
