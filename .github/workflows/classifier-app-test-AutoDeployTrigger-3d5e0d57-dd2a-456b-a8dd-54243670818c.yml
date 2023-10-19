@@ -1,0 +1,42 @@
+name: Trigger auto deployment for classifier-app-test
+
+# When this action will be executed
+on:
+  # Automatically trigger it when detected changes in repo
+  push:
+    branches: 
+      [ master ]
+    paths:
+    - '**'
+    - '.github/workflows/classifier-app-test-AutoDeployTrigger-3d5e0d57-dd2a-456b-a8dd-54243670818c.yml'
+
+  # Allow manual trigger 
+  workflow_dispatch:
+      
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout to the branch
+        uses: actions/checkout@v2
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.CLASSIFIERAPPTEST_AZURE_CREDENTIALS }}
+
+      - name: Build and push container image to registry
+        uses: azure/container-apps-deploy-action@v1
+        with:
+          appSourcePath: ${{ github.workspace }} 
+          registryUrl: classifierregistry.azurecr.io
+          registryUsername: ${{ secrets.CLASSIFIERAPPTEST_REGISTRY_USERNAME }}
+          registryPassword: ${{ secrets.CLASSIFIERAPPTEST_REGISTRY_PASSWORD }}
+          containerAppName: classifier-app-test
+          resourceGroup: classifer-group
+          imageToBuild: classifierregistry.azurecr.io/classifier-app-test:${{ github.sha }}
+          
+
+     
+
