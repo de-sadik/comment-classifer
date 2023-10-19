@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException, status
 import uvicorn
 from model import Comment
-from completion import completion_api_predict
+from completion import completion_api_predict, chat_completion_model
 
 app = FastAPI(title="Comment Classifier")
 
@@ -13,7 +13,8 @@ async def hc():
 @app.post("/comment",tags=["Comment"])
 async def comment(req:Comment):
     if req.comment:
-        result = completion_api_predict(req.comment)
+        # result = completion_api_predict(req.comment)
+        result = chat_completion_model(req.comment)
         return {"result": result}
     else:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Bad request")
