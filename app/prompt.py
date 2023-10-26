@@ -4,7 +4,7 @@ Loading Context - A truck sometimes needs to be loaded or unloaded at the facili
 Team Driver Context - If a shipment has urgency or needs to be shipped as soon as possible, then it may be termed as hot or priority shipment. Every commercial vehicle or truck is required to follow regulations like HoS or Hours of Service from the FMCSA. This means that no driver can drive more than 10 hours in a day. Shipments that are urgent and would take more than 10 hours to ship require the use of two drivers driving the truck alternatively as a team. The freight industry terms this as Team Drivers or Team. As average speed limit of US highways is 55 miles per hour, a shipment farther than 400 miles may require team drivers while an urgent shipment under 400 miles does not require team drivers.
 Following things we need to identify
 Lumper(defined by Loading Context) - Does this shipment need lumpers to load or unload the truck?
-Driver Assist(defined by Loading Context) - Does this shipment need driver to assist in loading, unloading, sorting or segregating this truck's load?
+Driver Assist(defined by Loading Context) - Does this shipment need driver to assist in loading, unloading, sorting  or workin or segregating this truck's load?
 Team Drivers(defined by Team Driver Context) - Does this shipment need team drivers to complete the shipment?
 Example -
 --------
