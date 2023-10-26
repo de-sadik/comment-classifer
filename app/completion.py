@@ -7,7 +7,7 @@ from prompt import completion_prompt, MESSGAE
 
 load_dotenv()
 
-openai.api_key = os.getenv("OPENAI_API_KEY") or "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"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 def completion_api_predict(comment) -> str:
