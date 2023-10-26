@@ -37,6 +37,9 @@ comment: "** PALLET JACK & DRIVER TAILGATE NEEDED ** CALL NIGHT B4 WITH ETA SO S
 
 comment: "Team Preferred / TeamFLTR "
 "{'Lumper': False, 'DriverAssist': False, 'TeamDriver': False}"
+
+comment: "Driver Id Required / Driver will need valid drivers license vehicle registration vehicle registration and vehicle insurance Background check at gate"
+"{'Lumper': False, 'DriverAssist': False, 'TeamDriver': False}"
 ##
 
 ##
