@@ -27,10 +27,10 @@ comment: "MUST STOP AT MILL (3837 S CONKLIN) 1ST BEFORE GOING TO WHSE SO THEY CA
 "{'Lumper': False, 'DriverAssist': False, 'TeamDriver': False}"
 
 comment: "ASAP DRIVER IN HAND PREFERED"
-"{'Lumper': False, 'DriverAssist': True, 'TeamDriver': False}"
+"{'Lumper': False, 'DriverAssist': False, 'TeamDriver': False}"
 
 comment: "DRIVER IN HAND. APPT IS PRE-SET."
-"{'Lumper': False, 'DriverAssist': True, 'TeamDriver': False}"
+"{'Lumper': False, 'DriverAssist': False, 'TeamDriver': False}"
 
 comment: "** PALLET JACK & DRIVER TAILGATE NEEDED ** CALL NIGHT B4 WITH ETA SO SOMEONE CAN UNLOAD"
 "{'Lumper': True, 'DriverAssist': False, 'TeamDriver': False}"
@@ -40,6 +40,15 @@ comment: "Team Preferred / TeamFLTR "
 
 comment: "Driver Id Required / Driver will need valid drivers license vehicle registration vehicle registration and vehicle insurance Background check at gate"
 "{'Lumper': False, 'DriverAssist': False, 'TeamDriver': False}"
+
+comment: "does lumper fees via text message"
+"{'Lumper': False, 'DriverAssist': False, 'TeamDriver': False}"
+
+comment: "Special Handling Charge"
+"{'Lumper': True, 'DriverAssist': False, 'TeamDriver': False}"
+
+comment: "DRIVER BRING A 3RD PARTY LUMPER WITH YOU AT TIME OF APPT. THERE ARE NO LUMPERS ON SITE."
+"{'Lumper': False, 'DriverAssist': False, 'TeamDriver': True}"
 ##
 
 ##
